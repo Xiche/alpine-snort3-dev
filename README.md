@@ -1,16 +1,17 @@
 Snort++ build quick start (inside the container) with unit test support:
 ```
 cd $HOME
-curl -LO https://snort.org/downloads/snortplus/daq-2.2.2.tar.gz
-tar xf daq-2.2.2.tar.gz
-cd daq-2.2.2
-./configure --disable-ipfw-module
+git clone https://github.com/snort3/libdaq.git
+cd libdaq
+./bootstrap
+./configure
 make install
 ldconfig
 
 cd $HOME
 git clone https://github.com/snort3/snort3.git
 cd snort3
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 ./configure\_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
 cd build
 make -j$(nproc) install

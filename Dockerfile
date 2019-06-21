@@ -10,15 +10,17 @@ apk update && \
 apk upgrade && \
 # Install the Snort build dependencies
 apk add \
-    bison \
+    autoconf \
+    automake \
     build-base \
     cmake \
     flatbuffers-dev@testing \
-    flex \
     hwloc-dev@testing \
     libdnet-dev \
+    libmnl-dev \
     libpcap-dev \
     libtirpc-dev \
+    libtool \
     luajit-dev \
     openssl-dev \
     pcre-dev \
@@ -31,7 +33,7 @@ apk add \
     gdb \
     git \
     lcov@testing \
-    vim \
+    vim
 # Install programs necessary for documentation generation
 #     asciidoc w3m \
 
