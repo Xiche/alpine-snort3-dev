@@ -28,7 +28,6 @@ apk add \
     util-linux-dev \
     xz-dev \
 # Install the Snort developer requirements
-    cppcheck \
     cpputest \
     curl \
     gdb \
