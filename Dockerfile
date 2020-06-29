@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
-# Add testing repo to sources for hwloc, flatbuffers, and lcov
+# Add testing repo for hwloc
 RUN echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 
 RUN \
@@ -14,13 +14,14 @@ apk add \
     automake \
     build-base \
     cmake \
-    flatbuffers-dev@testing \
+    flatbuffers-dev \
     hwloc-dev@testing \
     libdnet-dev \
     libmnl-dev \
     libpcap-dev \
     libtirpc-dev \
     libtool \
+    libunwind-dev \
     luajit-dev \
     openssl-dev \
     pcre-dev \
@@ -32,7 +33,6 @@ apk add \
     curl \
     gdb \
     git \
-    lcov@testing \
     vim
 # Install programs necessary for documentation generation
 #     asciidoc w3m \
