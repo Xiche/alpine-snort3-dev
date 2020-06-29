@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.12
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
 # Add testing repo for hwloc
